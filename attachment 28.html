@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Interview Lesson</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  }
+  h1, h2 {
+    text-align: center;
+    color: #1a3c90;
+  }
+  h2 {
+    margin-top: 40px;
+  }
+  .practice, .question {
+    margin: 15px 0;
+    padding: 15px 20px;
+    background: #e3edff;
+    border-left: 5px solid #1a3c90;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+  .practice:hover, .question:hover {
+    background: #d0e0ff;
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(26, 60, 144, 0.15);
+    border-left: 5px solid #2a4ca0;
+  }
+  .practice::before, .question::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s ease;
+  }
+  .practice:hover::before, .question:hover::before {
+    left: 100%;
+  }
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #f0f4ff;
+    border-radius: 0 0 8px 8px;
+  }
+  .answer p {
+    margin: 10px 0;
+  }
+  .active + .answer {
+    max-height: 200px; /* adjust if needed */
+    padding: 10px 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Job Interview Lesson</h1>
+
+  <h2>Linking Sound Practice</h2>
+  <div class="practice">Good_morning. <em>(/d/ links to /m/)</em></div>
+  <div class="practice">Thank_you for inviting me. <em>(/k/ links to /j/)</em></div>
+  <div class="practice">I_recently graduated. <em>(/aɪ/ links to /r/)</em></div>
+  <div class="practice">I_believe your workplace. <em>(/aɪ/ links to /b/)</em></div>
+  <div class="practice">That's_great. <em>(/s/ links to /g/)</em></div>
+  <div class="practice">Could_you give me. <em>(/d/ links to /j/)</em></div>
+  <div class="practice">We'll_be in touch soon. <em>(/l/ links to /b/)</em></div>
+  <div class="practice">I_appreciate the opportunity. <em>(/aɪ/ links to /ə/)</em></div>
+
+  <h2>Comprehension Questions</h2>
+
+  <div class="question">1. What is Lina's degree in?</div>
+  <div class="answer"><p>Business Management</p></div>
+
+  <div class="question">2. Which two areas of marketing is she interested in?</div>
+  <div class="answer"><p>Digital marketing and brand strategy</p></div>
+
+  <div class="question">3. What does Lina admire about the company?</div>
+  <div class="answer"><p>Innovative campaigns and prioritizing customer engagement</p></div>
+
+  <div class="question">4. What are her three main strengths?</div>
+  <div class="answer"><p>Clear communication, adaptability, and time-management skills</p></div>
+
+  <div class="question">5. What is one weakness she mentions?</div>
+  <div class="answer"><p>Being meticulous, which sometimes slows her down</p></div>
+
+  <div class="question">6. How did Lina solve the problem in her group project?</div>
+  <div class="answer"><p>She delegated tasks effectively, helping the group finish ahead of schedule</p></div>
+
+  <div class="question">7. What question does she ask the interviewer?</div>
+  <div class="answer"><p>About the onboarding process and opportunities for professional development</p></div>
+
+  <div class="question">8. What does the company provide for new employees?</div>
+  <div class="answer"><p>A two-week onboarding program and regular training sessions</p></div>
+
+</div>
+
+<script>
+  const toggles = document.querySelectorAll('.question, .practice');
+  toggles.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
